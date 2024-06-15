@@ -14,6 +14,7 @@ CORS(app)
 def home():
     return "Hello World"
 
+
 ## Returns the registration information for a given postcode
 @app.route('/postcode/<postcode>', methods=['GET'])
 @cross_origin(origin="http://localhost:3000/")
@@ -28,6 +29,7 @@ def postcode(postcode):
     response = {'registration': registration}
     return jsonify(response)
 
+
 ## Returns the candidates for a given postcode with their information
 @app.route('/postcode/<postcode>/candidates', methods=['GET'])
 @cross_origin(origin="http://localhost:3000/")
@@ -37,7 +39,6 @@ def candidates(postcode):
     data = req.json()
     
     candidates = data['dates'][0]['ballots'][0]['candidates']
-
     candidates_info = []
     for candidate in candidates:
         candidate_info = {
@@ -48,7 +49,6 @@ def candidates(postcode):
             "photo_url": candidate["person"]["photo_url"]
         }
         candidates_info.append(candidate_info)
-
     return jsonify(candidates_info)
 
 
