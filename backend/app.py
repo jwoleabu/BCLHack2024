@@ -16,6 +16,7 @@ def home():
 
 
 @app.route('/postcode/<postcode>', methods=['GET'])
+@cross_origin(origin="http://localhost:5173/")
 def postcode(postcode):
     url = f'https://developers.democracyclub.org.uk/api/v1/postcode/{postcode}?auth_token={os.getenv("DEMOCRACY_CLUB_TOKEN")}'
     req = re.get(url)
@@ -55,7 +56,7 @@ def postcode(postcode):
 
 ## Returns the candidates for a given postcode with their information
 @app.route('/postcode/<postcode>/candidates', methods=['GET'])
-@cross_origin(origin="http://localhost:3000/")
+@cross_origin(origin="http://localhost:5173/")
 def candidates(postcode):
     url = f'https://developers.democracyclub.org.uk/api/v1/postcode/{postcode}?auth_token={os.getenv("DEMOCRACY_CLUB_TOKEN")}'
     req = re.get(url)
