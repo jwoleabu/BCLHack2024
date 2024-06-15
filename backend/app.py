@@ -10,7 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/', methods=['GET'])
-@cross_origin(origin="http://localhost:3000/")
+@cross_origin(origin="http://localhost:5173/")
 def home():
     return "Hello World"
 
