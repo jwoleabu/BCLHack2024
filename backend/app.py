@@ -74,6 +74,22 @@ def candidates(postcode):
         candidates_info.append(candidate_info)
     return jsonify(candidates_info)
 
+@app.route('/mp/<id>', methods=['GET'])
+@cross_origin(origin="http://localhost:5173/")
+def get_member_name_by_id(member_id):
+    url = f"https://members-api.parliament.uk/api/Members/{member_id}"
+
+    # Make the GET request to the API
+    response = re.get(url)
+
+    if response.status_code == 200:
+        # Parse the JSON response
+        data = response.json()
+        return data
+    else:
+        print(f"Failed to retrieve data: {response.status_code}")
+        return None
+
 
 if __name__ == '__main__':
     app.run(debug=True)
