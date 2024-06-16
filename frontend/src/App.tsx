@@ -36,7 +36,10 @@ const App: React.FC = () => {
             {postcode === null ? (
                 <Search onSearchButtonClick={handleSearchButtonClick} />
             ) : showCandidateList ? (
+                <>
+                    <h1 className={"text-center mb-10 text-2xl"}>Candidate List</h1>
                 <CandidateList props={data} />
+                </>
             ) : (
                 <Registration onContinue={handleContinue} />
             )}
