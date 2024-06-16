@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function CandidateList({ props, onContinue }) {
     if (!props || !props.candidates) {
-        return <div>Loading...</div>; // You can replace this with a custom loading indicator if you have one
+        return <div>Loading...</div>;
     }
 
     return (

@@ -1,4 +1,10 @@
-const Graphs = () => {
+import React from 'react';
+
+interface Props {
+    onContinue: () => void;
+}
+
+const Graphs: React.FC<Props> = ({ onContinue }) => {
     return (
         <div className="flex flex-col">
             <h1 className="self-center text-4xl">Graphs</h1>
@@ -24,7 +30,10 @@ const Graphs = () => {
                 <p>The provided bar graph presents a comparative analysis of car travel times between Wandsworth and Nationwide. The graph delineates that the travel time within Wandsworth is approximately 6.25 hours, whereas the Nationwide travel time is significantly longer, at 12.34 hours. This visual data suggests that traveling nationwide requires nearly double the amount of time compared to traversing within Wandsworth.</p>
             </div>
             <button
-                className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Continue
+                className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5"
+                onClick={onContinue}
+            >
+                Continue
             </button>
         </div>
     );
