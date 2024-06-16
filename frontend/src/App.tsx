@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CandidateList from "./components/CandidateList.tsx";
 import Search from './components/ui/search';
 import Registration from './components/ui/registration';
