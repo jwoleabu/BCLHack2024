@@ -1,0 +1,62 @@
+{
+  "links": [
+    {
+      "href": "/Members/4788",
+      "method": "GET",
+      "rel": "self"
+    },
+    {
+      "href": "/Members/4788",
+      "method": "GET",
+      "rel": "overview"
+    },
+    {
+      "href": "/Members/4788/Synopsis",
+      "method": "GET",
+      "rel": "synopsis"
+    },
+    {
+      "href": "/Members/4788/Contact",
+      "method": "GET",
+      "rel": "contactInformation"
+    }
+  ],
+  "value": {
+    "gender": "F",
+    "id": 4788,
+    "latestHouseMembership": {
+      "house": 1,
+      "membershipEndDate": "2024-05-30T00:00:00",
+      "membershipEndReason": "Dissolution",
+      "membershipEndReasonId": 7,
+      "membershipEndReasonNotes": "Dissolution of Parliament",
+      "membershipFrom": "Putney",
+      "membershipFromId": 3689,
+      "membershipStartDate": "2019-12-12T00:00:00",
+      "membershipStatus": {
+        "status": 0,
+        "statusDescription": "Current Member",
+        "statusId": 0,
+        "statusIsActive": true,
+        "statusNotes": null,
+        "statusStartDate": "2019-12-12T00:00:00"
+      }
+    },
+    "latestParty": {
+      "abbreviation": "Lab",
+      "backgroundColour": "ea1d0e",
+      "foregroundColour": "ffffff",
+      "governmentType": 3,
+      "id": 15,
+      "isIndependentParty": false,
+      "isLordsMainParty": true,
+      "isLordsSpiritualParty": false,
+      "name": "Labour"
+    },
+    "nameAddressAs": null,
+    "nameDisplayAs": "Fleur Anderson",
+    "nameFullTitle": "Fleur Anderson",
+    "nameListAs": "Anderson, Fleur",
+    "thumbnailUrl": "https://members-api.parliament.uk/api/Members/4788/Thumbnail"
+  }
+}

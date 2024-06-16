@@ -76,8 +76,8 @@ def candidates(postcode):
 
 @app.route('/mp/<id>', methods=['GET'])
 @cross_origin(origin="http://localhost:5173/")
-def get_member_name_by_id(member_id):
-    url = f"https://members-api.parliament.uk/api/Members/{member_id}"
+def get_member_name_by_id(id):
+    url = f"https://members-api.parliament.uk/api/Members/{id}"
 
     # Make the GET request to the API
     response = re.get(url)
