@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface PostData {
     email: string;
@@ -43,7 +43,7 @@ export default function Registration() {
                         <p className="self-center"><b>Postcode</b>: {data.postcode}</p>
                         <p className="self-center"><b>Email</b>: {data.email}</p>
                         <p className="self-center"><b>Phone</b>: {data.phone}</p>
-                        <p className="self-center"><b>Website</b>: <a href={data.website}>{data.website}</a></p>
+                        <p className="self-center"><b>Website</b>: <a target="_blank" href={data.website}>{data.website}</a></p>
                     </div>
                 )
             )}
