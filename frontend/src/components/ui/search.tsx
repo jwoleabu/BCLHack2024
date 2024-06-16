@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 
-const Search = () => {
+interface SearchProps {
+  onSearchButtonClick: (postcode: string) => void;
+}
+
+const Search: React.FC<SearchProps> = ({ onSearchButtonClick }) => {
   const [postcode, setPostcode] = useState('');
 
-  const handleInputChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPostcode(event.target.value);
   };
 
   const handleButtonClick = () => {
-    console.log(postcode);
+    onSearchButtonClick(postcode);
   };
 
   return (

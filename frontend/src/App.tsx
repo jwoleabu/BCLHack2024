@@ -1,8 +1,11 @@
 import {useEffect, useState} from "react";
 import CandidateList from "@/components/CandidateList.tsx";
 import dataJson from '@/data.json'
+import Search from './components/ui/search';
+import Registration from './components/ui/registration';
 
-export default function App() {
+
+const App: React.FC = () => {
     const [data, setData] = useState(null);
 
     async function getData(postcode: String) {
@@ -19,12 +22,22 @@ export default function App() {
         }
         fetchData();
     }, []);
+
+    const [postcode, setPostcode] = useState<string | null>(null);
+
+    const handleSearchButtonClick = (enteredPostcode: string) => {
+    setPostcode(enteredPostcode);
+    };
+
     return (
-        <>
-        <h1 className="text-3xl font-bold underline">
-            Hello world!
-        </h1>
-            <CandidateList props={data}/>
-        </>
-    )
-}
+    <div className="App">
+        {postcode === null ? (
+        <Search onSearchButtonClick={handleSearchButtonClick} />
+        ) : (
+        <Registration />
+        )}
+    </div>
+    );
+};
+
+export default App;
