@@ -39,9 +39,8 @@ def postcode(postcode):
     return jsonify(response)
     
 
-
-## Returns the registration information for a given postcode
-""" @app.route('/postcode/<postcode>', methods=['GET'])
+""" ## Returns the registration information for a given postcode
+@app.route('/postcode/<postcode>', methods=['GET'])
 def postcode(postcode):
     headers = {
         'Authorization': f'Bearer {os.getenv("ELECTORAL_COMMISSION_TOKEN")}'
