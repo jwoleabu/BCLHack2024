@@ -1,0 +1,63 @@
+{
+  "candidates": [
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/79343/alexander-frank-richard-drury",
+      "email": null,
+      "name": "Alexander Frank Richard Drury",
+      "party": "Green Party",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/6a/cd/6acda342e085168a27d005489eeaa813.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/2903/marcus-jonathan-farmer",
+      "email": null,
+      "name": "Marcus Jonathan Farmer",
+      "party": "Independent",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/54/83/5483403e91d26c916abd3ccc5e79ad32.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/116137/kelly-fowler",
+      "email": "kelly4labour@outlook.com",
+      "name": "Kelly Fowler",
+      "party": "Labour Party",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/6c/85/6c85b29c4d0308580184cbbd30d5b5b5.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/116138/tanya-manzoor",
+      "email": null,
+      "name": "Tanya Manzoor",
+      "party": "Workers Party of Britain",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/da/1e/da1e1e251692a8f4480578d26c5b52f0.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/34655/tom-morrison",
+      "email": "Tom@tommorrison.org.uk",
+      "name": "Tom Morrison",
+      "party": "Liberal Democrats",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/5a/ac/5aac2c1e44db7bde4a2d4721277d5f10.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/4175/mary-robinson",
+      "email": "mary@mary-robinson.org.uk",
+      "name": "Mary Robinson",
+      "party": "Conservative and Unionist Party",
+      "photo_url": "https://s3.eu-west-2.amazonaws.com/static-candidates.democracyclub.org.uk/media/cache/92/19/921983a5055d62a3c1f8f4edcffb4556.jpg"
+    },
+    {
+      "absolute_url": "http://whocanivotefor.co.uk/person/79360/stephen-george-speakman",
+      "email": "cheadle@reformuk.com",
+      "name": "Stephen George Speakman",
+      "party": "Reform UK",
+      "photo_url": null
+    }
+  ],
+  "registration": {
+    "address": "Electoral Registration Officer\nTown Hall\nEdward Street",
+    "email": "elections.office@stockport.gov.uk",
+    "identifiers": [
+      "E08000007"
+    ],
+    "phone": "0161 217 6026",
+    "postcode": "SK1 3XE",
+    "website": "http://www.stockport.gov.uk/"
+  }
+}
