@@ -8,7 +8,11 @@ interface PostData {
     website: string;
 }
 
-export default function Registration() {
+interface RegistrationProps {
+    onContinue: () => void;
+}
+
+export default function Registration({ onContinue }: RegistrationProps) {
     const [data, setData] = useState<PostData | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -47,7 +51,7 @@ export default function Registration() {
                     </div>
                 )
             )}
-            <button className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Continue</button>
+            <button onClick={onContinue} className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Continue</button>
         </div>
     );
 }
