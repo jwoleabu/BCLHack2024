@@ -4,9 +4,12 @@ import Search from './components/ui/search';
 import Registration from './components/ui/registration';
 import Graphs from './components/ui/graphs';
 import Questions from './components/ui/questions';
+import Mp from "@/components/Mp.tsx";
+
 
 const App: React.FC = () => {
     const [data, setData] = useState(null);
+    const [mpdata, setmpData] = useState(null);
     const [postcode, setPostcode] = useState<string | null>(null);
     const [showCandidateList, setShowCandidateList] = useState(false);
     const [showGraphs, setShowGraphs] = useState(false);
@@ -18,11 +21,19 @@ const App: React.FC = () => {
         console.log(postData);
         return postData;
     }
+    async function getMp(number: string) {
+        const response = await fetch(`http://127.0.0.1:5000/mp/${number}`);
+        const mpData = await response.json();
+        console.log(mpData);
+        return mpData;
+    }
 
     useEffect(() => {
         async function fetchData() {
             const result = await getData("SW15 3BZ");
             setData(result);
+            const mpResult = await getMp("4788");
+            setmpData(mpResult);
         }
         fetchData();
     }, []);
@@ -55,11 +66,13 @@ const App: React.FC = () => {
                 <Graphs onContinue={handleContinueToQuestions} />
             ) : showCandidateList ? (
                 <>
+                    <h1 className="text-center mb-10 text-2xl">Your current MP</h1>
+                    <Mp props={mpdata}/>
                     <h1 className="text-center mb-10 text-2xl">Candidate List</h1>
-                    <CandidateList props={data} onContinue={handleContinueToGraphs} />
+                    <CandidateList props={data} onContinue={handleContinueToGraphs}/>
                 </>
             ) : (
-                <Registration onContinue={handleContinueToList} />
+                <Registration onContinue={handleContinueToList}/>
             )}
         </div>
     );
