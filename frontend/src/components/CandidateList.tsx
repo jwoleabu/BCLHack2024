@@ -1,6 +1,9 @@
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card.tsx";
+// CandidateList.tsx
 
-export default function CandidateList({ props }) {
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "./ui/card.tsx";
+import React from 'react';
+
+export default function CandidateList({ props, onContinue }) {
     if (!props || !props.candidates) {
         return <div>Loading...</div>; // You can replace this with a custom loading indicator if you have one
     }
@@ -31,6 +34,7 @@ export default function CandidateList({ props }) {
                 ))}
             </section>
             <button
+                onClick={onContinue}
                 className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Continue
             </button>
         </div>
