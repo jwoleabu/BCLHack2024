@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import CandidateList from "@/components/CandidateList.tsx";
-import dataJson from '@/data.json'
 import Search from './components/ui/search';
 import Registration from './components/ui/registration';
 
@@ -12,7 +11,6 @@ const App: React.FC = () => {
     async function getData(postcode: String) {
         const response = await fetch(`http://127.0.0.1:5000/postcode/${postcode}`)
         const postData = await response.json()
-        // const postData = dataJson;
         console.log(postData)
         return postData;
     }
