@@ -75,3 +75,8 @@
       @apply bg-background text-foreground;
     }
   }
+
+  body {
+    @apply bg-gradient-to-br from-gray-800 via-gray-900 to-gray-900 text-gray-200; /* Dark gradient background */
+  }
+  

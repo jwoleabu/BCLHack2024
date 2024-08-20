@@ -34,24 +34,26 @@ export default function Registration({ onContinue }: RegistrationProps) {
     }, []);
 
     return (
-        <div className="flex flex-col">
-            <h1 className="self-center text-4xl">Registration Information</h1>
-            <p className="self-center text-lg pt-5">Here is some information about your local area.</p>
-            <p className="self-center text-sm pb-5">Click the link to find out more.</p>
+        <div className="flex flex-col items-center bg-gray-700 p-8 rounded-xl shadow-lg w-2/3 mx-auto mt-10">
+            <h1 className="text-4xl text-white font-bold mb-6">Registration Information</h1>
+            <p className="text-lg text-gray-300 mb-2">Here is some information about your local area.</p>
+            <p className="text-sm text-gray-400 mb-6">Click the link to find out more.</p>
             {loading ? (
-                <p>Loading...</p>
+                <p className="text-white">Loading...</p>
             ) : (
                 data && (
-                    <div className="border-8 rounded-lg border-blue-300 flex flex-col">
-                        <p className="self-center"><b>Address</b>: {data.address}</p>
-                        <p className="self-center"><b>Postcode</b>: {data.postcode}</p>
-                        <p className="self-center"><b>Email</b>: {data.email}</p>
-                        <p className="self-center"><b>Phone</b>: {data.phone}</p>
-                        <p className="self-center"><b>Website</b>: <a target="_blank" href={data.website}>{data.website}</a></p>
+                    <div className="bg-gray-800 p-6 rounded-lg shadow-inner w-full">
+                        <p className="text-white mb-3"><b>Address:</b> {data.address}</p>
+                        <p className="text-white mb-3"><b>Postcode:</b> {data.postcode}</p>
+                        <p className="text-white mb-3"><b>Email:</b> {data.email}</p>
+                        <p className="text-white mb-3"><b>Phone:</b> {data.phone}</p>
+                        <p className="text-white"><b>Website:</b> <a className="text-purple-400 hover:underline" target="_blank" href={data.website}>{data.website}</a></p>
                     </div>
                 )
             )}
-            <button onClick={onContinue} className="self-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5">Continue</button>
+            <button onClick={onContinue} className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-6 rounded-lg mt-6 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                Continue
+            </button>
         </div>
     );
 }

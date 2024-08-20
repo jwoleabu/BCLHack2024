@@ -10,24 +10,24 @@ const Questions = () => {
     };
 
     return (
-        <div className="flex flex-col items-center mt-10">
-            <h1 className="self-center text-4xl">Ask Questions</h1>
-            <div className="flex justify-center mb-5 pt-10 w-4/5">
+        <div className="flex flex-col items-center mt-10 text-gray-100">
+            <h1 className="text-4xl font-bold mb-8">Ask Questions</h1>
+            <div className="flex justify-center mb-8 w-4/5">
                 <input 
                     type="text" 
                     placeholder="Search..." 
-                    className="border-4 rounded-lg border-black pl-10 pr-10 pt-2 pb-2 w-3/5"
+                    className="border-2 border-gray-600 bg-gray-800 rounded-lg py-2 px-4 w-3/5 text-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-inner transition duration-300 ease-in-out"
                 />
                 <button 
-                    className="bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-5"
+                    className="bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-6 rounded-lg ml-4 transition-transform transform hover:scale-105 shadow-lg"
                     onClick={handleSearchClick}
                 >
                     Search
                 </button>
             </div>
             {showParagraph && (
-                <div className="w-3/5">
-                    <p>
+                <div className="w-3/5 bg-gray-800 p-6 rounded-lg shadow-lg transition-opacity duration-500 ease-in-out opacity-100">
+                    <p className="text-lg leading-relaxed">
                         The potential shift from a Labour government to a Liberal Democrat (LibDem) MP in your local area could significantly shape local policies, particularly regarding unemployment rates. The Labour Party and the LibDems have distinct approaches to economic policies which could implicitly influence unemployment dynamics.
                         <br /><br />
                         <strong>Labour Government's Current Approach:</strong><br />
